@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:contexLi="net.hoangduchuu.drawer.MainActivity">
+
+
+    <Button
+        android:id="@+id/btnSelectFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:text="select Frame" />
+
+    <Button
+        android:id="@+id/btnSaveImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save" />
+
+    <Button
+        android:id="@+id/btnSelectBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/btnSelectFrame"
+        android:layout_toStartOf="@+id/btnSelectFrame"
+        android:text="select bg" />
+    <RelativeLayout
+        android:id="@+id/viewFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg" />
+
+        <ImageView
+            android:id="@+id/ivFrame"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/adore" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
