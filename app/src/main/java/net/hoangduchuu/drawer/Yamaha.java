@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -48,6 +50,44 @@ public class Yamaha {
             Log.d("huudeptrai", "loi cmnr");
 
         }
+    }
+
+    public static List<Icon> fakeList() {
+        List<Icon> iconList = new ArrayList<>();
+        iconList = new ArrayList<>();
+
+        iconList.add(new Icon(R.drawable.dream));
+        iconList.add(new Icon(R.drawable.two));
+        iconList.add(new Icon(R.drawable.three));
+        iconList.add(new Icon(R.drawable.four));
+        iconList.add(new Icon(R.drawable.five));
+        iconList.add(new Icon(R.drawable.six));
+        iconList.add(new Icon(R.drawable.seven));
+        iconList.add(new Icon(R.drawable.eight));
+        iconList.add(new Icon(R.drawable.nine));
+        iconList.add(new Icon(R.drawable.ten));
+        iconList.add(new Icon(R.drawable.adore));
+        iconList.add(new Icon(R.drawable.ah));
+        iconList.add(new Icon(R.drawable.amazed));
+        iconList.add(new Icon(R.drawable.angry));
+        iconList.add(new Icon(R.drawable.bad));
+        iconList.add(new Icon(R.drawable.baffle));
+        iconList.add(new Icon(R.drawable.beat));
+        iconList.add(new Icon(R.drawable.adore));
+        iconList.add(new Icon(R.drawable.ah));
+        iconList.add(new Icon(R.drawable.amazed));
+        iconList.add(new Icon(R.drawable.angry));
+        iconList.add(new Icon(R.drawable.bad));
+        iconList.add(new Icon(R.drawable.baffle));
+        iconList.add(new Icon(R.drawable.beat));
+        iconList.add(new Icon(R.drawable.adore));
+        iconList.add(new Icon(R.drawable.ah));
+        iconList.add(new Icon(R.drawable.amazed));
+        iconList.add(new Icon(R.drawable.angry));
+        iconList.add(new Icon(R.drawable.bad));
+        iconList.add(new Icon(R.drawable.baffle));
+        iconList.add(new Icon(R.drawable.beat));
+        return iconList;
     }
 
 
