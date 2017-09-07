@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = this.getClass().getSimpleName();
@@ -87,10 +86,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void save() {
-        Bitmap bitmap = Bitter.capture(viewFrame);
+        Bitmap bitmap = Yamaha.capture(viewFrame);
         if (bitmap != null) {
-            Log.d("kaka", "chay vo toi if roi");
-            Bitter.saveImage(bitmap, getApplicationContext());
+            Yamaha.saveImage(bitmap, getApplicationContext());
+            Log.d("huudeptrai", "chay vo toi if roi");
+
         }
     }
 
@@ -105,10 +105,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnSelectFrame:
                 selectFrame();
-                Toast.makeText(this, "btn select frame", Toast.LENGTH_SHORT).show();
                 break;
             default:
-                Toast.makeText(this, "kich sangr", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -155,13 +153,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String picturePath = cursor.getString(columnIndex);
         cursor.close();
         ivFrame.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-        Log.d("huudeptrai", "duoi");
+        Log.d("huudeptrai", "finish insertFrame");
     }
 
     private void insertBg(Intent data) {
-        Log.d("chayvaoday", "tren");
         Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         ivBg.setImageBitmap(bitmap);
+        Log.d("huudeptrai", "finish insertBg");
+
+
     }
 
 }
