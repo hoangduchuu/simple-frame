@@ -121,7 +121,7 @@ public class Bitter {
         Random generator = new Random();
         int n = 10000;
         n = generator.nextInt(n);
-        String fname = "RedBeanImage-" + n + ".jpg";
+        String fname = "RedBean-Image-" + n + ".jpg";
         File file = new File(myDir, fname);
         if (file.exists()) file.delete();
         try {
@@ -130,7 +130,7 @@ public class Bitter {
             out.flush();
             out.close();
             Log.d("kaka", "chay vo toi close cmnr");
-            Toast.makeText(context, "da luu hinh anh", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "da luu hinh anh"  + root +myDir.toString() + "/"+fname, Toast.LENGTH_SHORT).show();
 
 
         } catch (Exception e) {

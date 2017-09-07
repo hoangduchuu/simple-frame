@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         ivFrame.setLayoutParams(layoutParams);
                         break;
                 }
-                mRoot.invalidate();
+                viewFrame.invalidate();
                 return true;
             }
         });
@@ -102,11 +102,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnSelectBackground:
                 selectbg();
-                Toast.makeText(this, "btn select bg", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnSelectFrame:
-//                selectFrame();
-                startActivity(new Intent(MainActivity.this, DemoTouchActivity.class));
+                selectFrame();
                 Toast.makeText(this, "btn select frame", Toast.LENGTH_SHORT).show();
                 break;
             default:

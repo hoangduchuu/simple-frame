@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/content_main_relative_layout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:contexLi="net.hoangduchuu.drawer.MainActivity">
 
@@ -17,12 +17,14 @@
         android:layout_alignParentTop="true"
         android:layout_marginEnd="34dp"
         android:layout_marginRight="34dp"
+        android:background="@drawable/button_sharp"
         android:text="select Frame" />
 
     <Button
         android:id="@+id/btnSaveImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_sharp"
         android:text="save" />
 
     <Button
@@ -34,27 +36,25 @@
         android:layout_marginRight="22dp"
         android:layout_toLeftOf="@+id/btnSelectFrame"
         android:layout_toStartOf="@+id/btnSelectFrame"
+        android:background="@drawable/button_sharp"
         android:text="select bg" />
+
     <RelativeLayout
         android:id="@+id/viewFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:scaleType="centerCrop"
             android:id="@+id/ivBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg" />
+            android:background="@drawable/bg"
+            android:scaleType="centerCrop" />
 
         <ImageView
             android:id="@+id/ivFrame"
             android:layout_width="200sp"
             android:layout_height="200sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="0dp"
             android:src="@drawable/adore" />
 
     </RelativeLayout>
