@@ -48,8 +48,8 @@
             android:id="@+id/ivBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg"
-            android:scaleType="matrix" />
+            android:background="@drawable/adore"
+            android:scaleType="centerCrop" />
 
         <ImageView
             android:id="@+id/ivFrame"

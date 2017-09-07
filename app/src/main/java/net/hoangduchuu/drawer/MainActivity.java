@@ -146,7 +146,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void insertFrame(Intent data) {
-        Log.d("chayvaoday", "duoi");
         Uri selectedImage = data.getData();
         String[] filePathColumn = {MediaStore.Images.Media.DATA};
         Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
@@ -156,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String picturePath = cursor.getString(columnIndex);
         cursor.close();
         ivFrame.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-        Log.d("chayvaoday", "duoi");
+        Log.d("huudeptrai", "duoi");
     }
 
     private void insertBg(Intent data) {
