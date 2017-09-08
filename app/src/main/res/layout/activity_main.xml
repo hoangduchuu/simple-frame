@@ -55,7 +55,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/btnShowHide"
-
         android:layout_toStartOf="@+id/btnShowHide"
         android:background="@drawable/button_sharp"
         android:text="select bg" />

@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ViewGroup mRoot;
     private int mXDelta;
     private int mYDelta;
-
-    ScaleImage scaleImage;
+    String msg = "";
 
 
     @Override
@@ -114,9 +113,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void save() {
+
         Bitmap bitmap = Yamaha.capture( viewFrame );
         if (bitmap != null) {
             Yamaha.saveImage( bitmap, getApplicationContext() );
+            recyclerView.setVisibility( View.VISIBLE );
+
+
             Log.d( "huudeptrai", "chay vo toi if roi" );
 
         }
@@ -129,6 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()) {
             case R.id.btnSaveImage:
+
                 save();
                 break;
             case R.id.btnSelectBackground:
@@ -141,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnShowHide:
                 if (recyclerView.getVisibility() == View.GONE) {
-                    recyclerView.setVisibility( View.VISIBLE );
+
                     break;
 
                 }
@@ -174,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (requestCode) {
             case REQUEST_CODE_CAMERA_BG:
                 if (requestCode == REQUEST_CODE_CAMERA_BG && resultCode == RESULT_OK && data != null) {
+//                    insertBg( data );
                     insertBg( data );
                 }
                 break;
@@ -203,6 +208,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void insertBg(Intent data) {
+//        insertFrame( data );
+//        Log.d( "huudeptrai", "finish bg" );
+
         Bitmap bitmap = (Bitmap) data.getExtras().get( "data" );
         ivBg.setImageBitmap( bitmap );
         Log.d( "huudeptrai", "finish insertBg" );

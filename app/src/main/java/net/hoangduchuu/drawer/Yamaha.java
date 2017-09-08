@@ -21,7 +21,7 @@ public class Yamaha {
 
     public static Bitmap capture(View layout) {
         Bitmap bitmap;
-        layout.setDrawingCacheEnabled(true);
+        layout.setDrawingCacheEnabled( true );
         layout.buildDrawingCache();
         bitmap = layout.getDrawingCache();
         return bitmap;
@@ -29,25 +29,29 @@ public class Yamaha {
 
     public static void saveImage(Bitmap finalBitmap, Context context) {
         String root = Environment.getExternalStorageDirectory().toString();
-        File myDir = new File(root + "/RedFrame");
+        File myDir = new File( root + "/RedFrame" );
         myDir.mkdirs();
         Random generator = new Random();
         int n = 10000;
-        n = generator.nextInt(n);
+        n = generator.nextInt( n );
         String fname = "RedBean-Image-" + n + ".jpg";
-        File file = new File(myDir, fname);
+        File file = new File( myDir, fname );
         if (file.exists()) file.delete();
         try {
-            FileOutputStream out = new FileOutputStream(file);
-            finalBitmap.compress(Bitmap.CompressFormat.JPEG, 90, out);
+            FileOutputStream out = new FileOutputStream( file );
+            finalBitmap.compress( Bitmap.CompressFormat.JPEG, 90, out );
             out.flush();
             out.close();
-            Log.d("huudeptrai", "chay vo toi close cmnr");
-            Toast.makeText(context, "da luu hinh anh" + root + myDir.toString() + "/" + fname, Toast.LENGTH_SHORT).show();
+            Log.d( "huudeptrai", "chay vo toi close cmnr" );
+            String msg = "da luu hinh anh" + root + myDir.toString() + "/" + fname;
+//            AlertDialog.Builder builder = new AlertDialog.Builder( context );
+//            builder.setMessage( msg );
+//            builder.show();
+            Toast.makeText( context, msg, Toast.LENGTH_SHORT ).show();
 
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d("huudeptrai", "loi cmnr");
+            Log.d( "huudeptrai", "loi cmnr" );
 
         }
     }
@@ -56,37 +60,37 @@ public class Yamaha {
         List<Icon> iconList = new ArrayList<>();
         iconList = new ArrayList<>();
 
-        iconList.add(new Icon(R.drawable.dream));
-        iconList.add(new Icon(R.drawable.two));
-        iconList.add(new Icon(R.drawable.three));
-        iconList.add(new Icon(R.drawable.four));
-        iconList.add(new Icon(R.drawable.five));
-        iconList.add(new Icon(R.drawable.six));
-        iconList.add(new Icon(R.drawable.seven));
-        iconList.add(new Icon(R.drawable.eight));
-        iconList.add(new Icon(R.drawable.nine));
-        iconList.add(new Icon(R.drawable.ten));
-        iconList.add(new Icon(R.drawable.adore));
-        iconList.add(new Icon(R.drawable.ah));
-        iconList.add(new Icon(R.drawable.amazed));
-        iconList.add(new Icon(R.drawable.angry));
-        iconList.add(new Icon(R.drawable.bad));
-        iconList.add(new Icon(R.drawable.baffle));
-        iconList.add(new Icon(R.drawable.beat));
-        iconList.add(new Icon(R.drawable.adore));
-        iconList.add(new Icon(R.drawable.ah));
-        iconList.add(new Icon(R.drawable.amazed));
-        iconList.add(new Icon(R.drawable.angry));
-        iconList.add(new Icon(R.drawable.bad));
-        iconList.add(new Icon(R.drawable.baffle));
-        iconList.add(new Icon(R.drawable.beat));
-        iconList.add(new Icon(R.drawable.adore));
-        iconList.add(new Icon(R.drawable.ah));
-        iconList.add(new Icon(R.drawable.amazed));
-        iconList.add(new Icon(R.drawable.angry));
-        iconList.add(new Icon(R.drawable.bad));
-        iconList.add(new Icon(R.drawable.baffle));
-        iconList.add(new Icon(R.drawable.beat));
+        iconList.add( new Icon( R.drawable.dream ) );
+        iconList.add( new Icon( R.drawable.two ) );
+        iconList.add( new Icon( R.drawable.three ) );
+        iconList.add( new Icon( R.drawable.four ) );
+        iconList.add( new Icon( R.drawable.five ) );
+        iconList.add( new Icon( R.drawable.six ) );
+        iconList.add( new Icon( R.drawable.seven ) );
+        iconList.add( new Icon( R.drawable.eight ) );
+        iconList.add( new Icon( R.drawable.nine ) );
+        iconList.add( new Icon( R.drawable.ten ) );
+        iconList.add( new Icon( R.drawable.adore ) );
+        iconList.add( new Icon( R.drawable.ah ) );
+        iconList.add( new Icon( R.drawable.amazed ) );
+        iconList.add( new Icon( R.drawable.angry ) );
+        iconList.add( new Icon( R.drawable.bad ) );
+        iconList.add( new Icon( R.drawable.baffle ) );
+        iconList.add( new Icon( R.drawable.beat ) );
+        iconList.add( new Icon( R.drawable.adore ) );
+        iconList.add( new Icon( R.drawable.ah ) );
+        iconList.add( new Icon( R.drawable.amazed ) );
+        iconList.add( new Icon( R.drawable.angry ) );
+        iconList.add( new Icon( R.drawable.bad ) );
+        iconList.add( new Icon( R.drawable.baffle ) );
+        iconList.add( new Icon( R.drawable.beat ) );
+        iconList.add( new Icon( R.drawable.adore ) );
+        iconList.add( new Icon( R.drawable.ah ) );
+        iconList.add( new Icon( R.drawable.amazed ) );
+        iconList.add( new Icon( R.drawable.angry ) );
+        iconList.add( new Icon( R.drawable.bad ) );
+        iconList.add( new Icon( R.drawable.baffle ) );
+        iconList.add( new Icon( R.drawable.beat ) );
         return iconList;
     }
 

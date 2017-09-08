@@ -33,7 +33,6 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.MyViewHolder> 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_colum, parent, false);
 
-
         return new MyViewHolder(itemView);
     }
 
@@ -63,9 +62,8 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.MyViewHolder> 
                 @Override
                 public void onClick(View view) {
                     int p = recyclerView.getChildAdapterPosition(itemView);
-//                    final Animation anim = AnimationUtils.loadAnimation(itemView.getContext(), R.anim.anim);
-//                    ivFrame.setAnimation(anim);
                     ivFrame.setImageResource(iconList.get(p).url);
+                    notifyDataSetChanged();
                 }
             });
         }
