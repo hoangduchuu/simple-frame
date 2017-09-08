@@ -19,6 +19,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Bitmap bitmap = Yamaha.capture( viewFrame );
         if (bitmap != null) {
-            Yamaha.saveImage( bitmap, getApplicationContext() );
+            Yamaha.saveImage( bitmap, getApplicationContext(),20 );
             recyclerView.setVisibility( View.VISIBLE );
 
 
@@ -210,9 +211,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void insertBg(Intent data) {
 //        insertFrame( data );
 //        Log.d( "huudeptrai", "finish bg" );
-
         Bitmap bitmap = (Bitmap) data.getExtras().get( "data" );
         ivBg.setImageBitmap( bitmap );
+        try{
+            Bitmap temp = BitmapFactory.decodeFile( String.valueOf( ((Bitmap) data.getExtras().get( "data" )).getHeight() ) );
+            temp.getWidth();
+
+        }catch (Exception e){
+            Toast.makeText( this, "catch cmnr", Toast.LENGTH_SHORT ).show();
+        }
         Log.d( "huudeptrai", "finish insertBg" );
 
 

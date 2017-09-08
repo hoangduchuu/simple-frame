@@ -27,7 +27,7 @@ public class Yamaha {
         return bitmap;
     }
 
-    public static void saveImage(Bitmap finalBitmap, Context context) {
+    public static void saveImage(Bitmap finalBitmap, Context context, int quality) {
         String root = Environment.getExternalStorageDirectory().toString();
         File myDir = new File( root + "/RedFrame" );
         myDir.mkdirs();
@@ -39,7 +39,7 @@ public class Yamaha {
         if (file.exists()) file.delete();
         try {
             FileOutputStream out = new FileOutputStream( file );
-            finalBitmap.compress( Bitmap.CompressFormat.JPEG, 90, out );
+            finalBitmap.compress( Bitmap.CompressFormat.JPEG, quality, out );
             out.flush();
             out.close();
             Log.d( "huudeptrai", "chay vo toi close cmnr" );
